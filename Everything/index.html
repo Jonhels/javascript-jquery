@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everything</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Everything</h1>
+    <h2>From the book: Javascript & Jquery</h2>
+
+    <!-- Chapter 01 -->
+
+    <article>
+        <table>
+            <td>c01</td>
+            <td>The ABC of Programming</td>
+            <td>&#9745;</td>
+        </table>
+        <div class="presentation">
+            <h3>Creating a Basic Javascript</h3>
+            <p class="bold">Javascript code:</p>
+            <pre>
+            <code>
+                var today = new Date();
+                var hourNow = today.getHours();
+                var greeting;
+                
+                if (hourNow > 18) {
+                    greeting = 'Good evening!';
+                } else if (hourNow > 12) {
+                    greeting = 'Good afternoon!';
+                } else if (hourNow > 0) {
+                    greeting = 'Good morning!';
+                } else {
+                    greeting = 'Welcome!';
+                }
+                
+                document.write('&#60;h3&#62;' + greeting + '&#60;/h3&#62;');    
+            </code>
+            </pre>
+        </div>
+    </article>
+    <article>
+        <div class="presentation">
+            <h3>Output</h3>
+            <p class="bold">
+                C01 explanation
+            </p>
+            <p>
+                In this script we create variables with date and todays hour.
+                The script checks what hour it currently is and gives output corresponding
+                to the correct time of the day.
+            </p>
+            <p>
+                If it's before 18 it will say 'good evening', before 12 it will output 'good afternoon', if it's this
+                our less than 0 it
+                will output 'Good morning'.
+            </p>
+            <p>
+                If it's anything else than these hours it will output 'welcome'.
+            </p>
+            <p>
+                Everything is outputted as a h3 element with variable greeting
+            </p>
+
+        </div>
+        <div class="c01">
+            <p class="bold">Script output:</p>
+            <script>
+                var today = new Date();
+                var hourNow = today.getHours();
+                var greeting;
+
+                if (hourNow > 18) {
+                    greeting = 'Good evening!';
+                } else if (hourNow > 12) {
+                    greeting = 'Good afternoon!';
+                } else if (hourNow > 0) {
+                    greeting = 'Good morning!';
+                } else {
+                    greeting = 'Welcome!';
+                }
+
+                document.write('<h3>' + greeting + '</h3>');
+            </script>
+        </div>
+    </article>
+
+    <!-- Chapter 02 -->
+
+    <article>
+        <table>
+            <td>c01</td>
+            <td>The ABC of Programming</td>
+            <td>&#9745;</td>
+        </table>
+        <div class="presentation">
+            <h3>Creating a Basic Javascript</h3>
+            <p class="bold">Javascript code:</p>
+            <pre>
+            <code>
+   
+            </code>
+            </pre>
+        </div>
+    </article>
+    <article>
+        <div class="presentation">
+            <h3>Output</h3>
+            <p class="bold">
+                C01 explanation
+            </p>
+            <p>
+
+            </p>
+        </div>
+        <div class="c01">
+            <p class="bold">Script output:</p>
+            <script>
+
+            </script>
+        </div>
+    </article>
+
+    <!-- Chapter 03 -->
+
+    <article>
+        <div class="presentation">
+            <h3>Output</h3>
+            <p class="bold">
+                C01 explanation
+            </p>
+            <p>
+
+            </p>
+        </div>
+        <div class="c01">
+            <p class="bold">Script output:</p>
+            <script>
+
+            </script>
+        </div>
+    </article>
+
+</body>
+
+</html>
+
+<!-- <article>
+        <div class="presentation">
+            <h3>Output</h3>
+            <p class="bold">
+                C01 explanation
+            </p>
+            <p>
+
+            </p>
+        </div>
+        <div class="c01">
+            <p class="bold">Script output:</p>
+            <script>
+
+            </script>
+        </div>
+    </article>
+-->
