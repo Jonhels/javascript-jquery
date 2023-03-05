@@ -1,5 +1,18 @@
-.da{
-    color: rgb(138, 136, 136);
-    border-left: 1px solid rgb(138, 136, 136);
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+article{
     box-shadow: 2px 2px 5px 1px #6d72743b;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
 }
