@@ -29,7 +29,7 @@ console.log(points);
 
 // Number: 1, 2, 3, 100, 3.14
 
-// String: 'hello, world' "jonhels8888@gmail.com"
+// String: 'hello, world' "email@email.com"
 
 // Boolean: true / false
 
