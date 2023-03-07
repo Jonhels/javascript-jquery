@@ -1,3 +1,5 @@
+//Syntax Basics and types
+
 // Semicolon is used to show that we are finished with the statement (Code sentence). 
 // It's not needed, but reccomended to always use after the statements are finished
 ;
