@@ -79,14 +79,14 @@ const people = [
         'Jon',
         27,
         'I am a happy little man',
-        '',
+        '<a href="./index.html">Back to menu front page</a>',
         ['reading', 'cooking', 'hiking']
     ),
     new Person(
         'Jane',
         30,
         'I am a happy little woman',
-        '',
+        '<a href="./index.html">Back to menu front page</a>',
         ['painting', 'traveling', 'dancing']
 
     ),
@@ -94,7 +94,7 @@ const people = [
         'Bob',
         28,
         'I am a happy family man',
-        '<a href="./index.html">Back to start</a>',
+        '<a href="./index.html">Back to menu front page</a>',
         ['swimming', 'fishing', 'watching movies']
     )
 ];
