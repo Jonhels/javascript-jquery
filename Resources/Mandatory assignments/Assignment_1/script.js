@@ -56,17 +56,19 @@
 
 
 class Person {
-    constructor(name, age, information, home) {
+    constructor(name, age, information, home, hobbies) {
         this.name = name;
         this.age = age;
         this.information = information;
         this.home = home;
+        this.hobbies = hobbies;
     }
 
     sayHello() {
         return `<div>
                     <h1>Hello, my name is ${this.name} and I am ${this.age} years old</h1></h1>
                     <p>${this.information}</p>
+                    <p>Hobbies: ${this.hobbies} </p>
                     ${this.home}
                 </div>`;
     }
@@ -77,20 +79,23 @@ const people = [
         'Jon',
         27,
         'I am a happy little man',
-        ''
+        '',
+        ['reading', 'cooking', 'hiking']
     ),
     new Person(
         'Jane',
         30,
         'I am a happy little woman',
-        ''
+        '',
+        ['painting', 'traveling', 'dancing']
 
     ),
     new Person(
         'Bob',
         28,
         'I am a happy family man',
-        '<a href="./index.html">Back to start</a>'
+        '<a href="./index.html">Back to start</a>',
+        ['swimming', 'fishing', 'watching movies']
     )
 ];
 
