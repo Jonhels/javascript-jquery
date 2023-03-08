@@ -101,13 +101,13 @@ const people = [
 
 const personInfo = document.getElementById('person-info');
 
-let currentIndex = 0;
+let i = 0;
 
 function displayNextPerson() {
-    if (currentIndex < people.length) {
-        const person = people[currentIndex];
+    if (i < people.length) {
+        const person = people[i];
         personInfo.innerHTML = person.sayHello();
-        currentIndex++;
+        i++;
     }
 }
 
