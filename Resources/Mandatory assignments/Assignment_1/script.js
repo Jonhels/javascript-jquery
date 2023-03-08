@@ -55,3 +55,56 @@
 // Perhaps a menu of some sort
 
 
+class Person {
+    constructor(name, age, information, home) {
+        this.name = name;
+        this.age = age;
+        this.information = information;
+        this.home = home;
+    }
+
+    sayHello() {
+        return `<div>
+                    <h1>Hello, my name is ${this.name} and I am ${this.age} years old</h1></h1>
+                    <p>${this.information}</p>
+                    ${this.home}
+                </div>`;
+    }
+}
+
+const people = [
+    new Person(
+        'Jon',
+        27,
+        'I am a happy little man',
+        ''
+    ),
+    new Person(
+        'Jane',
+        30,
+        'I am a happy little woman',
+        ''
+
+    ),
+    new Person(
+        'Bob',
+        28,
+        'I am a happy family man',
+        '<a href="./index.html">Back to start</a>'
+    )
+];
+
+const personInfo = document.getElementById('person-info');
+
+let currentIndex = 0;
+
+function displayNextPerson() {
+    if (currentIndex < people.length) {
+        const person = people[currentIndex];
+        personInfo.innerHTML = person.sayHello();
+        currentIndex++;
+    }
+}
+
+const updateButton = document.getElementById('updatebutton');
+updateButton.addEventListener('click', displayNextPerson);
