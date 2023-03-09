@@ -9,6 +9,10 @@ body {
     background-color: #48773E;
 }
 
+h1, h2, p, button, .backbutton a {
+    color: white;
+}
+
 header {
     align-items: center;
     height: 50px;
@@ -71,7 +75,6 @@ img {
 button,
 #person-info, li p {
     background-color: rgba(154, 154, 154, 0.5);
-    color: white;
 }
 
 .backbutton a,
@@ -119,4 +122,5 @@ iframe,
 .personal-credit p {
     width: 300px;
     margin-bottom: 30px;
+    padding-left: 30px;
 }
