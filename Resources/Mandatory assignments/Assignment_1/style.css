@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #48773E;
+}
+
+header {
+    align-items: center;
+    height: 50px;
+    background-color: #305F26;
+}
+
+header,
+nav ul,
+.personal-credit {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+main,
+article {
+    margin: 5% 5%;
+}
+
+#person-info {
+    box-shadow: 2px 2px 5px 1px #6d72743b;
+    padding: 10px 0;
+}
+
+#person-info p,
+h1,
+h2,
+img,
+a {
+    margin: 10px;
+}
+
+.divheigh {
+    height: 550px;
+}
+
+h2 {
+    font-size: large;
+}
+
+img {
+    width: 200px;
+}
+
+.buttoncontainer {
+    margin-right: 217px;
+}
+
+.backbutton {
+    position: relative;
+    top: 62px;
+    left: 100px;
+    display: inline-block;
+}
+
+.backbutton a,
+button,
+#person-info, li p {
+    background-color: rgba(154, 154, 154, 0.5);
+    color: white;
+}
+
+.backbutton a,
+button {
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px 0 0;
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer{
+    padding: 0;
+    margin: 0;
+}
+
+iframe {
+    height: 400px;
+    margin-bottom: 40px;
+}
+
+iframe,
+.ntnu-logo,
+.personal-credit {
+    width: 100%;
+}
+
+.ntnu-logo {
+    padding-bottom: 20px;
+}
+
+.ntnu-logo img {
+    padding-bottom: 10px;
+}
+
+.ntnu-logo {
+    text-align: center;
+}
+
+.personal-credit p {
+    width: 300px;
+    margin-bottom: 30px;
+}

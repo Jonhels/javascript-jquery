@@ -56,46 +56,51 @@
 
 
 class Person {
-    constructor(name, age, information, home, hobbies) {
+    constructor(name, picture, age, information, home, hobbies) {
         this.name = name;
         this.age = age;
         this.information = information;
         this.home = home;
         this.hobbies = hobbies;
+        this.picture = picture;
     }
 
     sayHello() {
-        return `<div>
+        return `<div class="divheigh">
                     <h1>Hello, my name is ${this.name} and I am ${this.age} years old</h1></h1>
+                    ${this.picture}
                     <p>${this.information}</p>
                     <p>Hobbies: ${this.hobbies} </p>
-                    ${this.home}
-                </div>`;
+                </div>
+                <div class="backbutton">${this.home}</div>`;
     }
 }
 
 const people = [
     new Person(
-        'Jon',
+        'Ali',
+        '<img src="./img/bob.jpeg" alt="bob"></img>',
         27,
-        'I am a happy little man',
-        '<a href="./index.html">Back to menu front page</a>',
-        ['reading', 'cooking', 'hiking']
+        'When I am not lost in a good book, I love to spend time in the kitchen experimenting with new recipes and cooking up delicious meals. Cooking is not only a hobby for me, but also a way to show love and care for others. There is something really special about preparing a meal for someone and seeing their face light up when they take that first bite.',
+        '<a href="./index.html">Back to start</a>',
+        ['reading', ' cooking', ' hiking']
     ),
     new Person(
         'Jane',
+        '<img src="./img/jane.jpg" alt="bob"></img>',
         30,
-        'I am a happy little woman',
-        '<a href="./index.html">Back to menu front page</a>',
-        ['painting', 'traveling', 'dancing']
+        'Hi there, I am Jane, a 30-year-old woman who is always up for a good time. I describe myself as a happy little woman, because I truly believe that life is too short to be anything but happy.',
+        '<a href="./index.html">Back to start</a>',
+        ['painting', ' traveling', ' dancing']
 
     ),
     new Person(
-        'Bob',
+        'Samantha',
+        '<img src="./img/samantha.jpg" alt="bob"></img>',
         28,
-        'I am a happy family man',
-        '<a href="./index.html">Back to menu front page</a>',
-        ['swimming', 'fishing', 'watching movies']
+        'Hello there, I am Samantha, a 28-year-old woman who values family and happiness above all else. As a happy family woman, I love spending time with my loved ones and creating lasting memories that we can cherish together.',
+        '<a href="./index.html">Back to start</a>',
+        ['swimming', ' fishing', ' watching movies']
     )
 ];
 
