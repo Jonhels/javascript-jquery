@@ -56,7 +56,7 @@
 
 
 class Person {
-    constructor(name, picture, age, information, home, hobbies) {
+    constructor(name, picture, age, information, home, hobbies, funfact) {
         this.name = name;
         this.age = age;
         this.information = information;
@@ -71,6 +71,7 @@ class Person {
                     ${this.picture}
                     <p>${this.information}</p>
                     <p>Hobbies: ${this.hobbies} </p>
+                    <p>Hobbies: ${this.funfact} </p>
                 </div>
                 <div class="backbutton">${this.home}</div>`;
     }
@@ -118,3 +119,29 @@ function displayNextPerson() {
 
 const updateButton = document.getElementById('updatebutton');
 updateButton.addEventListener('click', displayNextPerson);
+
+// Mandatory assignment part 2: Built-in Obects
+// a) Use one property or method of the window object to add functionality/ information that is relevant for your web page. You are free to choose the property/method.
+let width = screen.width;
+document.getElementById("veiwport").innerHTML =  `Your veiwport is ${width} px`;
+
+// b) Use one property or method of the document object to add functionality/ information that is relevant for your web page. You are free to choose the property/method
+let lastModified = document.lastModified
+document.getElementById("lastmodified").innerHTML = `Last modified on ${lastModified}`;
+
+// c) Use one property or method of the string object on at least one of the string values that you have in your web page.
+let information = 'Mandatory assignment - JavaScript - IDG1011'
+let uppercase = information.toUpperCase();
+
+document.getElementById("assignment").innerHTML = `${uppercase}`;
+
+// d) Use one method/property of the number object OR the Math object.
+let visitors = Math.floor(Math.random() * 100);
+
+document.getElementById("visitors").innerHTML = `Todays visitors = ${visitors}`;
+
+// e) Use one method of the Date object to get/set the date and time for the Date object that you have created
+let date = new Date();
+let year = date.getFullYear();
+
+document.getElementById("year").innerHTML = `We are now in the year: ${year}`;

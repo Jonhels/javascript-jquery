@@ -15,7 +15,7 @@ h1, h2, p, button, .backbutton a {
 
 header {
     align-items: center;
-    height: 50px;
+    height: 80px;
     background-color: #305F26;
 }
 
@@ -28,6 +28,11 @@ nav ul,
 
 nav ul {
     list-style: none;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 5px 10px 0 0;
 }
 
 main,
