@@ -13,8 +13,7 @@ My reasoning for creating the script like this is because I wanted to generate i
 it to an id. This will allow me to generate an html template on my website. But to go from the first array item to the next i needed to add a button that cycle through 
 the array by incrementing i on click. 
 
-In part 2 of the assignment i decided that i just wantet to show that i know how to do it by bringing all information from part 2 into the header area of the html page.
-/
+*/
 
 // Define a Person class with a constructor that takes name, picture, age, information, home and hobbies parameters.
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
