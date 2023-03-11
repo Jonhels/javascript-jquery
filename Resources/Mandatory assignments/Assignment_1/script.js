@@ -14,10 +14,7 @@ it to an id. This will allow me to generate an html template on my website. But 
 the array by incrementing i on click. 
 
 In part 2 of the assignment i decided that i just wantet to show that i know how to do it by bringing all information from part 2 into the header area of the html page.
-
-I do not have a refrence to the book since I have not used it, I have used the lecture slides and the mdn documentation. 
-I do not own the book, I do have the pdf. The mdn documentation and the lectures was really helpful during this assignment.
-*/
+/
 
 // Define a Person class with a constructor that takes name, picture, age, information, home and hobbies parameters.
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
