@@ -1,62 +1,30 @@
-// Mandatory assignment
-// Create one page with html, css and js
-// Similar in complexity with examples on page 80-83 and 141-143 in the book
-// Free to choose topic, but should be different from the examples in the book
-// Styling should be on the same level as the examples in the book
-// Do not copy styling from the book
+/* 
+This script defines a Person class that has properties like, name, picture, age, information, home and hobbies, and a method called sayHello() that return a greeting string with information about the person. 
 
-// in a seperate file define goal of the script, break the goal in series of tasks (ordered list) that have to be performed step by step to achive the goal. Sketch out the tasks in a flowchart
-// Sources: ch1 in book and lectore notes from week 5 (p. 16-21)
-// Deliver plan in pdf
+Regarding the implementation, the script creates three Person objects, sets their properties, and stores them in an array called people. Then, it defines a function called displayNextPerson() that checks if the current index
+i is less than the length of the people array. If so, it retrives the next person object from the array and displays their information on the page by calling their sayHello() method. The function then increments the counter
+variable i to get the next person object on the next function call. 
 
-// Javascript implementation
-// Use external script file page 47-49 and 51 in the book
-// Path should be relative (local)
-// Use good coding practices taught in the class, and the ones in this guide
-// https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
-// For comments follow guides in the task II. comments (in the mandatory assignment)
+The script has a second part where it's defined property or method of the window object, document object, string Object, Math object and date object then displays it on the page. 
 
-// Script must contain the following: 
+--
 
-// 1. Objects. Resource: Lecture notes from week 8 pp. 2-11, and the resources recommended there, p. 11
+My reasoning for creating the script like this is because I wanted to generate information from an array, put it into a method and show it on the html page by connecting
+it to an id. This will allow me to generate an html template on my website. But to go from the first array item to the next i needed to add a button that cycle through 
+the array by incrementing i on click. 
 
-// Create at least three objects using a class
-// The class should initialize at least three properties in the constructor function and include at least one additional method (beside the constructor)
+In part 2 of the assignment i decided that i just wantet to show that i know how to do it by bringing all information from part 2 into the header area of the html page.
 
-// The objects should contain at least one property that has a more complex value, such as an array or another object
-// Resources: Page 118-119 in the book. Lecture week 7, p. 13
+I do not have a refrence to the book since I have not used it, I have used the lecture slides and the mdn documentation. 
+I do not own the book, I do have the pdf. The mdn documentation and the lectures was really helpful during this assignment.
+*/
 
-// Display information about your objects to the user interface
-// Page 110-111 in the book
-
-// 2. Built-in objects. Lecture notes from week 8. Page 120 - 139 in the book
-
-// Use one property or method of the window object to add functionality/information that is relevant for your web page. You are free to choose the property/method
-// Resources: Page 124 has a list of properties/methods that you can choose from in the book
-
-// Use one property or method of the document object to add functionality/information that is relavant for your web page. 
-// See page 126 for a list of properties/methods you can choose from
-
-// Use one property or method of the string object on at least one of the string value you have in your web page
-// See page 128 for a list of properties/methods you can choose from
-
-// Use one method/property of the number object OR the math object
-// See page 132 / 134 for a list of methods/properties you can choose from
-
-// Use one method of the date object to get/Set the date and time for the Date object that you have created
-// See page 137 for a list of methods you can choose from
-
-
-// What kind of script do i want to create?
-
-// I want to generate html elements from an array to the browser window 
-// I want to have close to no html in the html file but only create an array that wil generate this for me 
-// I want to update the page with a button 
-// Perhaps a menu of some sort
-
-
+// Define a Person class with a constructor that takes name, picture, age, information, home and hobbies parameters.
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+// Lecture 4: Classes / Built-in Objects
+// Implementation of the tast 1 objects. a).
 class Person {
-    constructor(name, picture, age, information, home, hobbies, funfact) {
+    constructor(name, picture, age, information, home, hobbies) {
         this.name = name;
         this.age = age;
         this.information = information;
@@ -65,83 +33,111 @@ class Person {
         this.picture = picture;
     }
 
+    // Define a sayHello method that returns a string containing a greeting and information about the person
+    // Implementation of the tast 1 objects. c).
     sayHello() {
         return `<div class="divheigh">
                     <h1>Hello, my name is ${this.name} and I am ${this.age} years old</h1></h1>
                     ${this.picture}
                     <p>${this.information}</p>
                     <p>Hobbies: ${this.hobbies} </p>
-                    <p>Hobbies: ${this.funfact} </p>
                 </div>
                 <div class="backbutton">${this.home}</div>`;
     }
 }
 
+// Create an array of Person objects with different preoperties
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+// Lecture 5: Decisions and Loops
+// Implementation of the tast 1 objects. b).
 const people = [
     new Person(
-        'Ali',
-        '<img src="./img/bob.jpeg" alt="bob"></img>',
-        27,
-        'When I am not lost in a good book, I love to spend time in the kitchen experimenting with new recipes and cooking up delicious meals. Cooking is not only a hobby for me, but also a way to show love and care for others. There is something really special about preparing a meal for someone and seeing their face light up when they take that first bite.',
-        '<a href="./index.html">Back to start</a>',
-        ['reading', ' cooking', ' hiking']
+        'Ali', // name
+        '<img src="./img/bob.jpeg" alt="bob"></img>', // picture
+        27, // age
+        'When I am not lost in a good book, I love to spend time in the kitchen experimenting with new recipes and cooking up delicious meals. Cooking is not only a hobby for me, but also a way to show love and care for others. There is something really special about preparing a meal for someone and seeing their face light up when they take that first bite.', // information
+        '<a href="./index.html">Back to start</a>', // home
+        ['reading', ' cooking', ' hiking'] // hobbies (array)
     ),
     new Person(
-        'Jane',
-        '<img src="./img/jane.jpg" alt="bob"></img>',
-        30,
-        'Hi there, I am Jane, a 30-year-old woman who is always up for a good time. I describe myself as a happy little woman, because I truly believe that life is too short to be anything but happy.',
-        '<a href="./index.html">Back to start</a>',
-        ['painting', ' traveling', ' dancing']
+        'Jane', // name
+        '<img src="./img/jane.jpg" alt="bob"></img>', // picture
+        30, // age
+        'Hi there, I am Jane, a 30-year-old woman who is always up for a good time. I describe myself as a happy little woman, because I truly believe that life is too short to be anything but happy.', // information
+        '<a href="./index.html">Back to start</a>', // home
+        ['painting', ' traveling', ' dancing'] // hobbies (array)
 
     ),
     new Person(
-        'Samantha',
-        '<img src="./img/samantha.jpg" alt="bob"></img>',
-        28,
-        'Hello there, I am Samantha, a 28-year-old woman who values family and happiness above all else. As a happy family woman, I love spending time with my loved ones and creating lasting memories that we can cherish together.',
-        '<a href="./index.html">Back to start</a>',
-        ['swimming', ' fishing', ' watching movies']
+        'Samantha', //name
+        '<img src="./img/samantha.jpg" alt="bob"></img>', // picture
+        28, // age
+        'Hello there, I am Samantha, a 28-year-old woman who values family and happiness above all else. As a happy family woman, I love spending time with my loved ones and creating lasting memories that we can cherish together.', // information
+        '<a href="./index.html">Back to start</a>', // home
+        ['swimming', ' fishing', ' watching movies'] // hobbies (array)
     )
 ];
 
+// Get the element with the ID "person-info"
 const personInfo = document.getElementById('person-info');
 
+// Define a counter variale i and adda function displayNextPerson that displays the next person objext in the people array
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else
 let i = 0;
-
 function displayNextPerson() {
+    // Check if the current index i is less than the length of the people array
     if (i < people.length) {
         const person = people[i];
+        // Set the innerHTML of the personInfo element to the result of calling the sayHello Method of the current person object
         personInfo.innerHTML = person.sayHello();
-        i++;
+        i++; // Increment the counter variable to get the next person object on the next function call
     }
 }
 
+// Get the element with the ID "updatebutton and add an event listener to call the displayNextPerson function when clicked
+// https://developer.mozilla.org/en-US/docs/Web/Events/Event_handlers
 const updateButton = document.getElementById('updatebutton');
 updateButton.addEventListener('click', displayNextPerson);
 
+
+
 // Mandatory assignment part 2: Built-in Obects
-// a) Use one property or method of the window object to add functionality/ information that is relevant for your web page. You are free to choose the property/method.
+// Lecture 6: DOM
+// Lecture 4: Classes / Built-in Objects
+
+// Implementation of the task 2 Built-in objects. a)
+// This code block uses the 'screen' object, wich is a property of the 'window' object, to get the width of the user's screen. This information is then displayed on the webpage using the 'innerHTML' property of the 'document.getElementById()' method
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/screen
 let width = screen.width;
-document.getElementById("veiwport").innerHTML =  `Your veiwport is ${width} px`;
+document.getElementById("viewport").innerHTML = `Your viewport is ${width} px`;
 
-// b) Use one property or method of the document object to add functionality/ information that is relevant for your web page. You are free to choose the property/method
-let lastModified = document.lastModified
-document.getElementById("lastmodified").innerHTML = `Last modified on ${lastModified}`;
+// Implementation of the task 2 Built-in objects. b)
+// This code block uses the 'lastModified' property of the 'document' object to get the date and time that the document was last modified. This information is then displayed on the webpage using the 'innerHTML' property of the 'document.getElementById()' method
+// https://developer.mozilla.org/en-US/docs/Web/API/Document/lastModified
+let lastChanged = document.lastModified
+document.getElementById("lastmodified").innerHTML = `Last modified on ${lastChanged}`;
 
-// c) Use one property or method of the string object on at least one of the string values that you have in your web page.
+// Implementation of the task 2 Built-in objects. c)
+// This code block uses the 'toUpperCase()' method of the 'string' object to convert the string variable 'information' to uppercase. The resulting string is then displayed on the webpage using the 'innerHTML' property of the 'document.getElementById()' method
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 let information = 'Mandatory assignment - JavaScript - IDG1011'
 let uppercase = information.toUpperCase();
 
 document.getElementById("assignment").innerHTML = `${uppercase}`;
 
-// d) Use one method/property of the number object OR the Math object.
+// Implementation of the task 2 Built-in objects. d)
+// This code block uses the 'Math' object and its 'floor()' and 'random()' methods to generate a random number between 0 and 99. This number represents the number of visitors to the website for the current day, and is displayed on the webpage using the 'innerHTML' property of the 'document.getElementById()' method
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 let visitors = Math.floor(Math.random() * 100);
 
 document.getElementById("visitors").innerHTML = `Todays visitors = ${visitors}`;
 
-// e) Use one method of the Date object to get/set the date and time for the Date object that you have created
+// Implementation of the task 2 Built-in objects. e)
+// This code block uses the 'Date' object and its 'getFullYear()' method to get the current year. This information is then displayed on the webpage using the 'innerHTML' property of the 'document.getElementById()' method
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 let date = new Date();
 let year = date.getFullYear();
 
 document.getElementById("year").innerHTML = `We are now in the year: ${year}`;
+
